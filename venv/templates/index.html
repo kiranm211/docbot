@@ -1,119 +1,34 @@
 <!DOCTYPE html>
-<html>
-<head>
-
-<script src="<a href="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js</a>"></script>
-<style>
-body
-{
-font-family: Garamond;
-background-color: black;
-}
-h1
-{
-color: black;
-margin-bottom: 0;
-margin-top: 0;
-text-align: center;
-font-size: 40px;
-}
-h3
-{
-color: black;
-font-size: 20px;
-margin-top: 3px;
-text-align: center;
-}
-#chatbox
-{
-background-color: black;
-margin-left: auto;
-margin-right: auto;
-width: 40%;
-margin-top: 60px;
-}
-#userInput {
-margin-left: auto;
-margin-right: auto;
-width: 40%;
-margin-top: 60px;
-}
-#textInput {
-width: 87%;
-border: none;
-border-bottom: 3px solid #009688;
-font-family: monospace;
-font-size: 17px;
-}
-#buttonInput {
-padding: 3px;
-font-family: monospace;
-font-size: 17px;
-}
-.userText {
-color: white;
-font-family: monospace;
-font-size: 17px;
-text-align: right;
-line-height: 30px;
-}
-.userText span {
-background-color: #009688;
-padding: 10px;
-border-radius: 2px;
-}
-.botText {
-color: white;
-font-family: monospace;
-font-size: 17px;
-text-align: left;
-line-height: 30px;
-}
-.botText span {
-background-color: #EF5350;
-padding: 10px;
-border-radius: 2px;
-}
-#tidbit {
-position:absolute;
-bottom:0;
-right:0;
-width: 300px;
-}
-</style>
-</head>
-<body>
-<h1>Flask Chatterbot Example</h1>
-<div>
-<div id="chatbox">
-<p class="botText"><span>Hi! I'm Chatterbot.</span></p>
-</div>
-<div id="userInput">
-<input id="textInput" type="text" name="msg" placeholder="Message">
-<input id="buttonInput" type="submit" value="Send">
-</div>
-<script>
-function getBotResponse() {
-var rawText = $("#textInput").val();
-var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
-$("#textInput").val("");
-$("#chatbox").append(userHtml);
-document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
-$.get("/get", { msg: rawText }).done(function(data) {
-var botHtml = '<p class="botText"><span>' + data + '</span></p>';
-$("#chatbox").append(botHtml);
-document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
-});
-}
-$("#textInput").keypress(function(e) {
-if(e.which == 13) {
-getBotResponse();
-}
-});
-$("#buttonInput").click(function() {
-getBotResponse();
-})
-</script>
-</div>
-</body>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Doctor Bot</title>
+  </head>
+  <body>
+    <h1>Cards</h1>
+    <div class="container">
+    <div class="jumbotron">
+    <div class="row">
+      <div class="col-sm-8">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="https://i.gifer.com/F2xM.gif" >
+      <div class="card-body">
+        <p class="card-text">Disease Information</p>
+        <p> You get a information about any disease that you can think of. Go on try it </p>
+        <a href="disease">CLick here</a>
+      </div>
+    </div>
+  </div>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="data:image/jpeg;base64,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" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">Hello there</p>
+        <a href="genral">CLick here</a>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+  </body>
 </html>

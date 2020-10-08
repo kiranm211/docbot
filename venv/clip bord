@@ -1,0 +1,126 @@
+import warnings
+import nltk
+from flask import Flask, render_template, request,Blueprint
+# import
+from newspaper import Article
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+warnings.filterwarnings('ignore')
+# download
+disease=Blueprint("disease",__name__)
+nltk.download('punkt', quiet=True)
+# get article
+article = Article('https://www.mayoclinic.org/diseases-conditions/chronic-kidney-disease/symptoms-causes/syc-20354521')
+article.download()
+article.parse()
+article.nlp()
+corpus = article.text
+# tokenization
+text = corpus
+sentence_list = nltk.sent_tokenize(text)
+
+
+def index_sort(list_var):
+    length = len(list_var)
+    list_index = list(range(0, length))
+    x = list_var
+    for i in range(length):
+        for j in range(length):
+            if x[list_index[i]] > x[list_index[j]]:
+                temp = list_index[i]
+                list_index[i] = list_index[j]
+                list_index[j] = temp
+
+    return list_index
+
+
+# random greeting
+def bot_response(user_input):
+    # user_input= "chronic kidney disease"
+    # sentence_list.append(user_input)
+    bot_response = ''
+    # cm = CountVectorizer().fit_transform(sentence_list)
+    # similarity_scores = cosine_similarity(cm[-1], cm)
+    # similarity_scores_list = similarity_scores.flatten()
+    # index = index_sort(similarity_scores_list)
+    # index = index[1:]
+    response_flag = 0
+    greetings = ['hi', 'hello','hay']
+    if user_input in greetings:
+        bot_response=bot_response+' '+'1.book apointment \n 2. get information about a disease\n enter the number'
+        response_flag = 1
+    j = 0
+    listcode =['1','2']
+    if user_input in listcode:
+        bot_response=bot_response+' '+'enter name '
+        response_flag = 1
+    names=['chronic kidney disease','brain tumor symptoms']
+    disease=0
+    if user_input in names:
+        name= user_input
+        disease=1
+        if name.lower() == 'chronic kidney disease':
+            url = 'https://www.mayoclinic.org/diseases-conditions/chronic-kidney-disease/symptoms-causes/syc-20354521'
+        elif name.lower() == 'brain tumor symptoms':
+            url = 'https://www.mayoclinic.org/diseases-conditions/brain-tumor/symptoms-causes/syc-20350084#:~:text=A%20brain%20tumor%20is%20a,tumors%20are%20cancerous%20(malignant).'
+            # get article
+    if disease==1:
+        article = Article(url)
+        article.download()
+        article.parse()
+        article.nlp()
+        corpus = article.text
+        # tokenization
+        text = corpus
+        sentence_list = nltk.sent_tokenize(text)
+        sentence_list.append(user_input)
+        bot_response = ''
+        cm = CountVectorizer().fit_transform(sentence_list)
+        similarity_scores = cosine_similarity(cm[-1], cm)
+        similarity_scores_list = similarity_scores.flatten()
+        index = index_sort(similarity_scores_list)
+        index = index[1:]
+
+        for i in range(len(index)):
+            if similarity_scores_list[index[i]] > 0.0:
+                bot_response = bot_response + ' ' + sentence_list[index[i]]
+                response_flag = 1
+                j += 1
+                if j > 2:
+                    sentence_list.remove(user_input)
+                    break
+    if response_flag == 0:
+        bot_response = bot_response + ' ' + 'i did not understand'
+
+
+    return bot_response
+
+
+def give_oprions():
+    string = '1.book apointment \n2. get information about a disease\nenter the number'
+    return (string)
+
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def home():
+    return render_template("/index.html")
+
+
+@app.route("/get")
+def get_bot_response():
+    userText = request.args.get('msg')
+    return str(bot_response(userText))
+
+
+# @app.route("/put")
+# def put():
+#     # userText = request.args.get('msg')
+#     return str(give_oprions())
+
+
+if __name__ == "__main__":
+    app.run(debug=True)  # debug=True

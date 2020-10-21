@@ -7,8 +7,8 @@ This project is not completely finshed
 #Gowtham R - nlp and scramping 
 
 Doctor bot / DocBot
-       The project i am currently working. The out come of the project is to build a "Chat-bot for clinical purpose". With the help of Natural language processing we are working on a chat-bot that can provide different features like  
+       The project we am currently working. The out come of the project is to build a "Chat-bot for clinical purpose". With the help of Natural language processing we are working        on a chat-bot that can provide different features like  
    1. Full information of any disease (minor like fever  or major like cancer )
    2. Help the user to find a doctor in real time and book appointment with real doctors 
    3. Suggest help with minor problems suggested by doctors 
-   4. Still working to add more features   
+   4. Still working to add more features

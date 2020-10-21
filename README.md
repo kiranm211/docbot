@@ -2,7 +2,7 @@ This project is not completely finshed
 このプロジェクトは完全には完成していません
 進行中です
 # docbot
-#hemanth r shankar - frontend
+#hemanth r shankar - frontend, user experience , product design 
 #Kiran M - nlp, scramping, training and testing 
 #Gowtham R - nlp and scraping 
 #Deva Bhargav- nlp and scraping

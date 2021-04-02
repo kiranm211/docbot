@@ -124,3 +124,28 @@ def get_bot_response():
 
 if __name__ == "__main__":
     app.run(debug=True)  # debug=True
+
+
+
+
+.botText {
+color: white;
+background-color: #82ccdd;
+font-family: monospace;
+font-size: 17px;
+text-align: left;
+line-height: 30px;
+}
+.userText span {
+background-color: #009688;
+padding: 10px;
+border-radius: 2px;
+}
+.userText {
+color: white;
+font-family: monospace;
+font-size: 17px;
+text-align: right;
+line-height: 30px;
+background-color: #78e08f;
+}

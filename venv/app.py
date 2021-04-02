@@ -1,18 +1,21 @@
 import warnings
 from flask import Flask, render_template, request
-from disease import disease
+from genral import disease
 # from genral import genral
+from search import gsearch
 
 warnings.filterwarnings('ignore')
 # download
 app = Flask(__name__)
-app.register_blueprint(disease, url_prefix="")
-# app.register_blueprint(genral, url_prefix="")
 
+app.register_blueprint(disease, url_prefix="/d")
+# app.register_blueprint(gsearch,url_prefix="/gsearch")
+# app.register_blueprint(disease, url_prefix="/d")
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+
+    return render_template("index1.html")
 
 
 if __name__ == "__main__":

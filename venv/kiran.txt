@@ -1,0 +1,106 @@
+Name:  kiran
+DATE OF REGISTRATION : 2021-03-22
+Name:  kiran
+ AGE:  21
+PHONE NUMBER:  6360562412
+Gender:  male
+Name of the disease:  Q fever
+Name of the doctor:  Dr. Sreenath S Manikanti
+What are your symptoms:  high temp
+
+ *************************************************** 
+ 
+Name:  kiran
+Name of the disease:  Brain tumor
+Name of the doctor:  Dr. Arjun Srivatsa
+What are your symptoms:  pain in the forehead
+
+ *************************************************** 
+ 
+Name:  kiran
+DATE OF REGISTRATION : 2021-04-01
+Name:  kiran
+DATE OF REGISTRATION : 2021-04-01
+PHONE NUMBER:  6360562412
+Name of the disease:  Brain tumor
+Name of the doctor:  Dr. K Kartik Revanappa
+Name:  kiran
+DATE OF REGISTRATION : 2021-04-01
+PHONE NUMBER:  6360562412
+Name of the disease:  Brain tumor
+Name of the doctor:  Dr. K Kartik Revanappa
+Name:  kiran
+DATE OF REGISTRATION : 2021-04-01
+PHONE NUMBER:  6360562412
+Name of the disease:  Brain tumor
+Name of the doctor:  Dr. Arjun Srivatsa
+Remarks:  Dr. Arjun Srivatsa
+Name:  kiran
+DATE OF REGISTRATION : 2021-04-01
+PHONE NUMBER:  6360562412
+Name of the disease:  Brain tumor
+Name of the doctor:  Dr. Arjun Srivatsa
+Remarks:  Dr. Arjun Srivatsa
+Name:  kiran
+DATE OF REGISTRATION : 2021-04-01
+PHONE NUMBER:  6360562412
+Name of the disease:  Brain tumor
+Name of the doctor:  Dr. Arjun Srivatsa
+Remarks:  Dr. Arjun Srivatsa
+Name:  kiran
+DATE OF REGISTRATION : 2021-04-01
+PHONE NUMBER:  6360562412
+Name of the disease:  Brain tumor
+Name of the doctor:  Dr. Arjun Srivatsa
+Remarks:  Dr. Arjun Srivatsa
+Remarks:  Dr. Arjun Srivatsa
+Remarks:  Dr. Arjun Srivatsa
+Remarks:  Dr. Arjun Srivatsa
+Remarks:  Dr. Arjun Srivatsa
+Remarks:  Dr. Arjun Srivatsa
+Name:  kiran
+DATE OF REGISTRATION : 2021-04-01
+PHONE NUMBER:  6360562412
+Name of the disease:  Brain tumor
+Name of the doctor:  Dr. Arjun Srivatsa
+Symptoms:  headacke
+Hearing problems yes
+Seizures, especially in someone who doesn't have a history of seizures yes
+Personality or behavior changes no
+Confusion in everyday matters no
+Speech difficulties yes
+Difficulty with balance no
+
+ *************************************************** 
+ 
+Name:  kiran
+DATE OF REGISTRATION : 2021-04-01
+PHONE NUMBER:  6360562412
+Name of the disease:  Aneurysm popliteal
+Name of the doctor:  Dr. Karunesh Kumar H S
+Symptoms:  none
+Name:  kiran
+DATE OF REGISTRATION : 2021-04-01
+PHONE NUMBER:  6360562412
+Name of the disease:  Aneurysm popliteal
+Name of the doctor:  Dr. Lakshmi P V
+No record none
+
+ *************************************************** 
+ 
+Name:  kiran
+DATE OF REGISTRATION : 2021-04-01
+PHONE NUMBER:  6360562412
+Name of the disease:  Aneurysm popliteal
+Name of the doctor:  Dr. Karunesh Kumar H S
+Name:  kiran
+DATE OF REGISTRATION : 2021-04-02
+PHONE NUMBER:  6360562412
+Name of the disease:  Lung cancer
+Name of the doctor:  Dr. Sandeep Nayak
+Symptoms:  pain in cheast 
+Headache yes
+Bone pain yes
+Losing weight without trying yes
+Hoarseness no
+Chest pain yes

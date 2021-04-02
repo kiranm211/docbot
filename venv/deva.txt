@@ -1,0 +1,30 @@
+Name:  deva
+DATE OF REGISTRATION : 2021-03-29
+Name:  deva
+ AGE:  21
+PHONE NUMBER:  9686754210
+Gender:  male
+Name of the disease:  HIV/AIDS
+Name of the doctor:  Dr. Anand P R
+What are your symptoms:  fever
+
+ *************************************************** 
+ 
+Name:  deva
+DATE OF REGISTRATION : 2021-03-29
+Name of the disease:  HIV/AIDS
+Name of the doctor:  Dr. Anand P R
+What are your symptoms:  Dr. Anand P R
+Describe your condition in few lines(Eg. no.of days you are suffering ) i am suffering from 5days 
+
+ *************************************************** 
+ 
+Name:  deva
+DATE OF REGISTRATION : 2021-03-29
+Name of the disease:  
+Name of the doctor:  Dr. Narendra Rao
+What are your symptoms:  Dr. Narendra Rao
+Describe your condition in few lines(Eg. no.of days you are suffering ) from 5 days
+
+ *************************************************** 
+ 

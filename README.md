@@ -1,6 +1,7 @@
 This project is not completely finshed 
 このプロジェクトは完全には完成していません
 進行中です
+we are working on vesion 2.0 with additional features 
 # docbot
 
 Doctor bot / DocBot

@@ -12,3 +12,4 @@ Doctor bot / DocBot
    4. If you enter the symptoms then the botwill suggest you the doctor to contact for the disesas.
    5. Send email using Gmail server  
    6. Still working to add more features
+# botp

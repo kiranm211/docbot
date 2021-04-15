@@ -40,6 +40,7 @@ def index_sort(list_var):
 
 
 class driver:
+    check=0
     symp = []
     flag = 0
     docname = ''
@@ -78,9 +79,9 @@ def bot_response(user_input, static=None):
             driver.flag += 1
 
         try:
-            print('try',driver.diseasename)
+            # print('try',driver.diseasename)
             if driver.flag == 1:
-                query ='doctor who can treat '+ driver.diseasename + ' near me'
+                query ='doctor who can treat '+ driver.diseasename + ' near me"practo"'
                 # print(query)
                 url = ''
                 for j in search(query, tld="co.in", num=1, stop=1, pause=2):
@@ -803,7 +804,33 @@ def bot_response(user_input, static=None):
                     bot_response = j
             driver.diseasename=bot_response
             response_flag = 1
-            return (bot_response)
+            query = 'doctor who can treat ' + driver.diseasename + ' near me "practo"'
+            # print(query)
+            url = ''
+            for j in search(query, tld="co.in", num=1, stop=1, pause=2):
+                url = j
+            print(url)
+            page = requests.get(url)
+            soup = BeautifulSoup(page.content, 'lxml')
+            match = soup.find_all('div', class_="info-section")
+            # match
+            link = soup.find_all(['a', 'h3'], limit=15)
+            j = 0
+
+            for links in link:
+                if j < 7:
+                    if links.text == '11000+ Teleconsultations Successfully Assisted Across India. Book Now! ':
+                        pass
+                    if links.text != 'You do not have permission to view this directory or page using the credentials that you supplied.':
+                        response = response + ' ' + links.text
+                else:
+                    break
+                j += 1
+            driver.docname = link[1].text
+            if response == '':
+                pass
+            driver.flag = 1
+            return response
 
         names.append(user_input)
         cn = CountVectorizer().fit_transform(names)
@@ -832,18 +859,18 @@ def bot_response(user_input, static=None):
             for i in dis:
                 for j in i:
                     list1=list1+''+str(j)
-                    print(j)
-                    print(list1)
+                    # print(j)
+                    # print(list1)
             list1 = list(map(str, list1.split('$$')))
             list1 = list(filter(('').__ne__, list1))
-            print(list1)
+            # print(list1)
             # print(range(len(symp)), symp)
             list1.reverse()
             for i in range(len(list1)):
                 driver.symp.append(list1[i])
                 if i > 5:
                     break
-            print(list1,driver.symp)
+            # print(list1,driver.symp)
             terms1 = ['Overview', 'Causes', 'Risk_Factors', 'Symptoms', 'When_to_see_a_doctor', 'Complications']
             terms = ['what', 'causes', 'risks', 'symptoms', 'when to see a doctor', 'complications']
             terms.append(user_input)
@@ -876,11 +903,15 @@ def bot_response(user_input, static=None):
             res = list(map(str, res1.split('$$')))
             res = list(filter(('').__ne__, res))
             final = ''
+            xco=0
             for i in range(len(res)):
                 if 'Open pop-up dialog box Close' in res[i]:
                     continue
                 else:
                     final = final + str(res[i])
+                    xco+=1
+                if xco>=2:
+                    break
             response_flag=1
             return (final)
 
@@ -957,6 +988,7 @@ def bot_response(user_input, static=None):
         if driver.flag == 2 and driver.i == 7:
             if driver.i==7 and driver.s==0:
                 print(driver.symp)
+                driver.symp = list(filter(('').__ne__, driver.symp))
                 response = response + 'Please tpye "YES" if you the following symptoms or type "NO"'
                 response = response +str('</p><p class="botText"><span>') + driver.symp[driver.s]
                 write_to_file(driver.filename,questions[driver.i - 1] + " " + user_input)
@@ -991,7 +1023,7 @@ def bot_response(user_input, static=None):
                 response = response +str('</p><p class="botText"><span>') + driver.symp[driver.s]
                 write_to_file(driver.filename, driver.symp[driver.s-1] + " " + user_input)
                 driver.s += 1
-                driver.i += 1
+                driver.i = 8
                 return response
 
 
@@ -1006,10 +1038,10 @@ def bot_response(user_input, static=None):
             write_to_file(driver.filename, questions[driver.i - 1] + " " + user_input)
             write_to_file(driver.filename, "\n" + ' *************************************************** ' + "\n ")
             driver.i += 1
-            return response1
+            return response
     if driver.flag == 3:
         if driver.k == 0:
-            string= 'Enter the date:'
+            string= 'Enter the date for Appointment:'
             driver.k+=1
             return string
         if driver.k == 1:
@@ -1084,6 +1116,7 @@ disease = Blueprint("disease", __name__, static_folder="static", template_folder
 def sug1(static=None):
     global response
     time.sleep(4)
+    response = 'please type "yes" to fill a form and continue with appointment '
     if driver.flag == 0 and driver.j == 0 :
         response = 'You can also learn about the symptoms ,causes and  risks by typing (symptoms or risks or casues) of (disease name)'
         driver.j=1
@@ -1101,11 +1134,19 @@ def home():
 
 @disease.route("/get")
 def get_bot_response():
+    if driver.flag==0 and driver.check==0:
+        write_to_file('log.txt', '**********************************************************')
+        driver.check=1
     userText = request.args.get('msg')
+    write_to_file('log.txt', 'user:' + " " + userText)
     if driver.flag == 0 and userText.lower()!='no':
-        return str(bot_response(userText)) + str('</p><p class="botText"><span>') + str(sug()) + str('</span>')
+        resp=str(bot_response(userText))
+        write_to_file('log.txt', 'Docbot:' + " " + resp)
+        return str(resp) + str('</p><p class="botText"><span>') + str(sug()) + str('</span>')
     else:
-        return str(bot_response(userText))
+        resp=str(bot_response(userText))
+        write_to_file('log.txt', 'Docbot:' + " " + resp)
+        return str(resp)
 
 
 # @disease.route("/sug")

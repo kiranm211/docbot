@@ -1,0 +1,63 @@
+**********************************************************
+user: what is brain tumor
+Docbot: A brain tumor is a mass or growth of abnormal cells in your brain.Many different types of brain tumors exist. Some brain tumors are noncancerous (benign), and some brain tumors are cancerous (malignant). Brain tumors can begin in your brain (primary brain tumors), or cancer can begin in other parts of your body and spread to your brain (secondary, or metastatic, brain tumors).
+user: yes
+Docbot:   Dr. Arjun Srivatsa Neurosurgeon Kalyan Nagar,Bangalore Tranquil Healthcare  + 1 more 98% 
+user: yes
+Docbot:  Name: 
+user: kiran
+Docbot:   AGE: 
+user: 21
+Docbot:  Gender: 
+user: male
+Docbot:  PHONE NUMBER: 
+user: 6360562412
+Docbot:  Symptoms: 
+user: headache
+Docbot: Please tpye "YES" if you the following symptoms or type "NO"</p><p class="botText"><span>Hearing problems
+user: yes
+Docbot: Please tpye "YES" if you the following symptoms or type "NO"</p><p class="botText"><span>Seizures, especially in someone who doesn't have a history of seizures
+user: no
+Docbot: Please tpye "YES" if you the following symptoms or type "NO"</p><p class="botText"><span>Personality or behavior changes
+user: yes
+Docbot: Please tpye "YES" if you the following symptoms or type "NO"</p><p class="botText"><span>Confusion in everyday matters
+user: no
+Docbot: Please tpye "YES" if you the following symptoms or type "NO"</p><p class="botText"><span>Speech difficulties
+user: yes
+Docbot: Please tpye "YES" if you the following symptoms or type "NO"</p><p class="botText"><span>Difficulty with balance
+user: no
+Docbot:  would you like to book a appointment 
+user: yes
+Docbot: Enter the date for Appointment:
+user: 17/04/2021
+Docbot: Enter the time:
+user: 11:00 AM
+Docbot:  Appointment booking succesfull, Email is sent </p><p class="botText"><span>Thanks for using our services
+
+**********************************************************
+user: my symptoms are New onset or change in pattern of headaches Headaches that gradually become more frequent and more severe Unexplained nausea or vomiting Vision problems, such as blurred vision, double vision or loss of peripheral vision Gradual loss of sensation or movement in an arm or a leg Difficulty with balance Speech difficulties
+Docbot:   Dr. Arjun Srivatsa Neurosurgeon Kalyan Nagar,Bangalore Tranquil Healthcare  + 1 more 98% 
+user: yes
+Docbot:  Name: 
+user: kiran
+Docbot:  PHONE NUMBER: 
+user: 6360562412
+Docbot:  Symptoms: 
+user: New onset or change in pattern of headaches Headaches that gradually become more frequent and more severe Unexplained nausea or vomiting Vision problems, such as blurred vision, double vision or loss of peripheral vision Gradual loss of sensation or movement in an arm or a leg Difficulty with balance Speech difficulties
+Docbot: Please tpye "YES" if you the following symptoms or type "NO"</p><p class="botText"><span>Hearing problems
+user: yes
+Docbot: Please tpye "YES" if you the following symptoms or type "NO"</p><p class="botText"><span>Seizures, especially in someone who doesn't have a history of seizures
+user: no
+Docbot: Please tpye "YES" if you the following symptoms or type "NO"</p><p class="botText"><span>Personality or behavior changes
+user: yes
+Docbot: Please tpye "YES" if you the following symptoms or type "NO"</p><p class="botText"><span>Confusion in everyday matters
+user: yes
+Docbot: Please tpye "YES" if you the following symptoms or type "NO"</p><p class="botText"><span>Speech difficulties
+user: no
+Docbot: Please tpye "YES" if you the following symptoms or type "NO"</p><p class="botText"><span>Difficulty with balance
+user: yes
+Docbot: Enter the date for Appointment:
+user: 18/04/2021
+Docbot: Enter the time:
+user: 12:00 AM
+Docbot:  Appointment booking succesfull, Email is sent </p><p class="botText"><span>Thanks for using our services

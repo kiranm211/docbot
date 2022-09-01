@@ -31,7 +31,7 @@ ml-datasets==0.1.6
 murmurhash==1.0.2	
 newspaper3k==0.2.8	
 nltk==3.4.5	
-numpy==1.19.2	
+numpy==1.22.0	
 packaging==20.4	
 pip==20.2.3
 plac==1.1.3	
